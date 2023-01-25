@@ -1,0 +1,38 @@
+{
+	"name": "monitor",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/Yokanskeya/monitor",
+	"author": "Skeya <yokanskeya@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"server",
+		"client",
+		"shared"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.28.3",
+		"@typescript-eslint/parser": "^4.28.3",
+		"concurrently": "^6.0.0",
+		"eslint": "^7.30.0",
+		"eslint-config-next": "^11.0.1",
+		"eslint-config-xo": "^0.37.0",
+		"eslint-config-xo-react": "^0.25.0",
+		"eslint-config-xo-typescript": "^0.43.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"prettier": "^2.2.1",
+		"typescript": "^4.2.3"
+	},
+	"scripts": {
+		"dev:server": "yarn workspace @monitor/server dev",
+		"dev:client": "yarn workspace @monitor/client dev",
+		"dev": "concurrently \"yarn dev:server\" \"yarn dev:client\"",
+		"lint": "eslint .",
+		"client:build": "yarn workspace @monitor/client build",
+		"client:start": "yarn workspace @monitor/client start",
+		"server:build": "yarn workspace @monitor/server build",
+		"server:start": "yarn workspace @monitor/server start"
+	}
+}
