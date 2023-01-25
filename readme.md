@@ -14,7 +14,7 @@
 ## Installation Instructions
 
 1. Clone the repo
-   1. `git clone https://github.com/alii/monitor`
+   1. `git clone https://github.com/Yokanskeya/monitor`
    2. `cd monitor`
 2. Install dependencies
    1. `yarn`
